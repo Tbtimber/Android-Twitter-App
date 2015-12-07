@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import worldline.ssm.rd.ux.wltwitter.utils.PreferenceHandler;
+
 
 public class WLTwitterActivity extends Activity {
 
@@ -17,7 +19,12 @@ public class WLTwitterActivity extends Activity {
         setContentView(R.layout.activity_main);
         //Subtitle setup
         String login = getIntent().getExtras().getString("login"); //Get string stored in intent's extras
-        getActionBar().setSubtitle(login); //Set subtitle to be that string
+        try {
+            getActionBar().setSubtitle(login); //Set subtitle to be that string
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        }
+
 
 
     }
@@ -47,11 +54,13 @@ public class WLTwitterActivity extends Activity {
     }
     public void logout() {
         //Delete previous log info in preferences
-        Context context = getApplication();
-        SharedPreferences prefs = context.getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor =  prefs.edit();
-        editor.clear(); //Clear all preferences
-        editor.commit(); //Apply changes
+        //Context context = getApplication();
+        //SharedPreferences prefs = context.getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+        //SharedPreferences.Editor editor =  prefs.edit();
+        //editor.clear(); //Clear all preferences
+        //editor.commit(); //Apply changes
+
+        PreferenceHandler.clearPref();
 
         finish();//Finish this activity => go back to previous (login)
     }

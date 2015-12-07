@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import worldline.ssm.rd.ux.wltwitter.utils.PreferenceHandler;
+
 
 /**
  * Created by Matthieu on 04/12/2015.
@@ -23,12 +25,13 @@ public class WLTwitterLoginActivity extends Activity implements View.OnClickList
 
         findViewById(R.id.loginButton).setOnClickListener(this);
 
-        Context context = getApplication();
-        SharedPreferences sharedPref = context.getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
-        if ((sharedPref.getString("login", "null") != "null") && (sharedPref.getString("password", "null") != "null")) {
+        //Context context = getApplication();
+        //SharedPreferences sharedPref = context.getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+        //if ((sharedPref.getString("login", "null") != "null") && (sharedPref.getString("password", "null") != "null")) {
+        if((PreferenceHandler.getPref("login") != null) && (PreferenceHandler.getPref("password") != null)) {
             Intent intent = new Intent(getApplicationContext(), WLTwitterActivity.class);
             Bundle extras = new Bundle();
-            extras.putString("login", sharedPref.getString("login", "null"));
+            extras.putString("login", PreferenceHandler.getPref("login"));
             intent.putExtras(extras);
             startActivity(intent);
         }
@@ -48,13 +51,15 @@ public class WLTwitterLoginActivity extends Activity implements View.OnClickList
             Toast.makeText(this, "Error", Toast.LENGTH_LONG).show();
         } else {
             //Create new SharedParameters
-            Context context = getApplication();
-            SharedPreferences prefs = context.getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
-            SharedPreferences.Editor editor = prefs.edit(); //Get editor
+            //Context context = getApplication();
+            //SharedPreferences prefs = context.getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+            //SharedPreferences.Editor editor = prefs.edit(); //Get editor
             //Create/Change preferences parameter
-            editor.putString("login", loginText.getText().toString());
-            editor.putString("password", passWordText.getText().toString());
-            editor.commit(); //Apply changes to sharedpreference
+            //editor.putString("login", loginText.getText().toString());
+            //editor.putString("password", passWordText.getText().toString());
+            //editor.commit(); //Apply changes to sharedpreference
+            PreferenceHandler.addPref("login", loginText.getText().toString());
+            PreferenceHandler.addPref("password", passWordText.getText().toString());
 
 
             //Create and send Intent
