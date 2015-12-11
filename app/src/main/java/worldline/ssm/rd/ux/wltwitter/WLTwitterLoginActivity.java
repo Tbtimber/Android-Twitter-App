@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -58,9 +59,10 @@ public class WLTwitterLoginActivity extends Activity implements View.OnClickList
             //editor.putString("login", loginText.getText().toString());
             //editor.putString("password", passWordText.getText().toString());
             //editor.commit(); //Apply changes to sharedpreference
-            PreferenceHandler.addPref("login", loginText.getText().toString());
-            PreferenceHandler.addPref("password", passWordText.getText().toString());
-
+            if(((CheckBox)findViewById(R.id.rememberMe)).isChecked()) {
+                PreferenceHandler.addPref("login", loginText.getText().toString());
+                PreferenceHandler.addPref("password", passWordText.getText().toString());
+            }
 
             //Create and send Intent
             Intent intent = new Intent(getApplicationContext(), WLTwitterActivity.class);

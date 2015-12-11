@@ -372,7 +372,6 @@ int id action_mode_close_button 0x7f0d0020
 int id activity_chooser_view_content 0x7f0d0021
 int id always 0x7f0d0016
 int id beginning 0x7f0d0013
-int id button 0x7f0d0042
 int id checkbox 0x7f0d0029
 int id collapseActionView 0x7f0d0017
 int id decor_content_parent 0x7f0d002f
@@ -402,6 +401,7 @@ int id passwordEditText 0x7f0d0040
 int id progress_circular 0x7f0d0005
 int id progress_horizontal 0x7f0d0006
 int id radio 0x7f0d002b
+int id rememberMe 0x7f0d0042
 int id search_badge 0x7f0d0035
 int id search_bar 0x7f0d0034
 int id search_button 0x7f0d0036
@@ -490,7 +490,8 @@ int string permission_rationale 0x7f070020
 int string preference_file_key 0x7f070021
 int string prompt_email 0x7f070022
 int string prompt_password 0x7f070023
-int string title_activity_wltwitter_login 0x7f070024
+int string remember_me 0x7f070024
+int string title_activity_wltwitter_login 0x7f070025
 int style AppBaseTheme 0x7f0b0002
 int style AppTheme 0x7f0b0066
 int style Base_TextAppearance_AppCompat 0x7f0b0028

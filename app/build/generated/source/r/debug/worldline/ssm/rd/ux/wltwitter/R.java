@@ -1342,7 +1342,6 @@ containing a value of this type.
         public static final int activity_chooser_view_content=0x7f0d0021;
         public static final int always=0x7f0d0016;
         public static final int beginning=0x7f0d0013;
-        public static final int button=0x7f0d0042;
         public static final int checkbox=0x7f0d0029;
         public static final int collapseActionView=0x7f0d0017;
         public static final int decor_content_parent=0x7f0d002f;
@@ -1372,6 +1371,7 @@ containing a value of this type.
         public static final int progress_circular=0x7f0d0005;
         public static final int progress_horizontal=0x7f0d0006;
         public static final int radio=0x7f0d002b;
+        public static final int rememberMe=0x7f0d0042;
         public static final int search_badge=0x7f0d0035;
         public static final int search_bar=0x7f0d0034;
         public static final int search_button=0x7f0d0036;
@@ -1470,7 +1470,8 @@ containing a value of this type.
         public static final int preference_file_key=0x7f070021;
         public static final int prompt_email=0x7f070022;
         public static final int prompt_password=0x7f070023;
-        public static final int title_activity_wltwitter_login=0x7f070024;
+        public static final int remember_me=0x7f070024;
+        public static final int title_activity_wltwitter_login=0x7f070025;
     }
     public static final class style {
         /**  API 11 theme customizations can go here. 

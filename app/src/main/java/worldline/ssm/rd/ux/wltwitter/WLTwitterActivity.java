@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import worldline.ssm.rd.ux.wltwitter.async.RetrieveTweetsAsyncTask;
 import worldline.ssm.rd.ux.wltwitter.utils.PreferenceHandler;
 
 
@@ -24,9 +25,8 @@ public class WLTwitterActivity extends Activity {
         } catch (NullPointerException e) {
             e.printStackTrace();
         }
-
-
-
+        RetrieveTweetsAsyncTask task = new RetrieveTweetsAsyncTask();
+        task.execute(login);
     }
 
 
