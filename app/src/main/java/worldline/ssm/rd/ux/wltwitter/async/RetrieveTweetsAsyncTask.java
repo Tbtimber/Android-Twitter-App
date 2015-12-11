@@ -1,17 +1,25 @@
 package worldline.ssm.rd.ux.wltwitter.async;
 
 import android.os.AsyncTask;
+import android.util.Log;
 
 import java.util.List;
 
+import worldline.ssm.rd.ux.wltwitter.fragments.TweetsFragment;
 import worldline.ssm.rd.ux.wltwitter.helpers.TwitterHelper;
+import worldline.ssm.rd.ux.wltwitter.interfaces.TweetsChangeListener;
 import worldline.ssm.rd.ux.wltwitter.pojo.Tweet;
 
 /**
  * Created by Matthieu on 11/12/2015.
  */
 public class RetrieveTweetsAsyncTask extends AsyncTask<String, Integer  , List<Tweet>> {
-    private String appName = "WLTwitter";
+    TweetsChangeListener mListener;
+
+    public RetrieveTweetsAsyncTask(TweetsChangeListener mListener) {
+        this.mListener = mListener;
+    }
+
     @Override
     protected List<Tweet> doInBackground(String... params) {
         int size = params.length;
@@ -27,7 +35,8 @@ public class RetrieveTweetsAsyncTask extends AsyncTask<String, Integer  , List<T
     @Override
     protected void onPostExecute(List<Tweet> tweets) {
         for(Tweet t: tweets) {
-            System.out.println("["+this.appName+"]" + t.text);
+            Log.d("TweetAsyncTask", t.text);
         }
+        mListener.onTweetRetrieved(tweets);
     }
 }

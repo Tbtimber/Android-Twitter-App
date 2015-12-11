@@ -355,7 +355,7 @@ int drawable ic_launcher 0x7f020035
 int drawable twitter 0x7f020036
 int drawable white_blue_round_corners_selector 0x7f020037
 int drawable white_round_corners_background 0x7f020038
-int id actionLogout 0x7f0d0044
+int id actionLogout 0x7f0d0047
 int id action_bar 0x7f0d0031
 int id action_bar_activity_content 0x7f0d0000
 int id action_bar_container 0x7f0d0030
@@ -392,7 +392,8 @@ int id listMode 0x7f0d0009
 int id list_item 0x7f0d0025
 int id loginButton 0x7f0d0041
 int id loginEditText 0x7f0d003f
-int id logout_setting 0x7f0d0043
+int id logout_setting 0x7f0d0046
+int id main_activity_layout 0x7f0d0043
 int id middle 0x7f0d0015
 int id never 0x7f0d0019
 int id none 0x7f0d000e
@@ -420,6 +421,8 @@ int id split_action_bar 0x7f0d0007
 int id submit_area 0x7f0d003c
 int id tabMode 0x7f0d000b
 int id title 0x7f0d0027
+int id tweet_fragment 0x7f0d0044
+int id tweetsListView 0x7f0d0045
 int id up 0x7f0d0008
 int id useLogo 0x7f0d0012
 int id withText 0x7f0d001a
@@ -451,6 +454,7 @@ int layout abc_simple_dropdown_hint 0x7f040016
 int layout activity_login_layout 0x7f040017
 int layout activity_main 0x7f040018
 int layout support_simple_spinner_dropdown_item 0x7f040019
+int layout tweet_fragment_layout 0x7f04001a
 int menu menu_main 0x7f0e0000
 int menu wltwitter 0x7f0e0001
 int mipmap ic_launcher 0x7f030000

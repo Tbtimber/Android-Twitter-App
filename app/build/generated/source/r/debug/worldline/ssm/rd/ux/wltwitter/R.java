@@ -1325,7 +1325,7 @@ containing a value of this type.
         public static final int white_round_corners_background=0x7f020038;
     }
     public static final class id {
-        public static final int actionLogout=0x7f0d0044;
+        public static final int actionLogout=0x7f0d0047;
         public static final int action_bar=0x7f0d0031;
         public static final int action_bar_activity_content=0x7f0d0000;
         public static final int action_bar_container=0x7f0d0030;
@@ -1362,7 +1362,8 @@ containing a value of this type.
         public static final int list_item=0x7f0d0025;
         public static final int loginButton=0x7f0d0041;
         public static final int loginEditText=0x7f0d003f;
-        public static final int logout_setting=0x7f0d0043;
+        public static final int logout_setting=0x7f0d0046;
+        public static final int main_activity_layout=0x7f0d0043;
         public static final int middle=0x7f0d0015;
         public static final int never=0x7f0d0019;
         public static final int none=0x7f0d000e;
@@ -1390,6 +1391,8 @@ containing a value of this type.
         public static final int submit_area=0x7f0d003c;
         public static final int tabMode=0x7f0d000b;
         public static final int title=0x7f0d0027;
+        public static final int tweet_fragment=0x7f0d0044;
+        public static final int tweetsListView=0x7f0d0045;
         public static final int up=0x7f0d0008;
         public static final int useLogo=0x7f0d0012;
         public static final int withText=0x7f0d001a;
@@ -1425,6 +1428,7 @@ containing a value of this type.
         public static final int activity_login_layout=0x7f040017;
         public static final int activity_main=0x7f040018;
         public static final int support_simple_spinner_dropdown_item=0x7f040019;
+        public static final int tweet_fragment_layout=0x7f04001a;
     }
     public static final class menu {
         public static final int menu_main=0x7f0e0000;
