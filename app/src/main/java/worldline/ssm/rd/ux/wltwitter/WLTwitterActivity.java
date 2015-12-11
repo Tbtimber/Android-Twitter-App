@@ -1,15 +1,31 @@
 package worldline.ssm.rd.ux.wltwitter;
 
 import android.app.Activity;
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
+
 
 import worldline.ssm.rd.ux.wltwitter.async.RetrieveTweetsAsyncTask;
+import worldline.ssm.rd.ux.wltwitter.interfaces.TweetListener;
+import worldline.ssm.rd.ux.wltwitter.pojo.Tweet;
 import worldline.ssm.rd.ux.wltwitter.utils.PreferenceHandler;
 
 
-public class WLTwitterActivity extends Activity {
+public class WLTwitterActivity extends Activity implements TweetListener {
+    @Override
+    public void onRetweet(Tweet tweet) {
+
+    }
+
+    @Override
+    public void onViewTweet(Tweet tweet) {
+        Toast.makeText(this, tweet.text, Toast.LENGTH_LONG).show();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,9 +40,11 @@ public class WLTwitterActivity extends Activity {
             e.printStackTrace();
         }
 
-        RetrieveTweetsAsyncTask task = new RetrieveTweetsAsyncTask();
-        task.execute(login);
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
+        TweetFragment fragment = new TweetFragment();
+        fragmentTransaction.add(R.id.main_activity_layout, fragment).commit();
     }
 
 

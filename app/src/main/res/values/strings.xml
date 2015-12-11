@@ -3,7 +3,7 @@
 
     <string name="app_name">Twitter\'s feed</string>
     <string name="hello_world">Hello world!</string>
-    
+
     <!-- MENU -->
     <string name="action_logout">Logout</string>
 
@@ -32,5 +32,8 @@
 
     <string name="preference_file_key">worldline.ssm.rd.ux.wltwitter.PREFERENCE_FILE_KEY</string>
     <string name="remember_me">Remember me</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
