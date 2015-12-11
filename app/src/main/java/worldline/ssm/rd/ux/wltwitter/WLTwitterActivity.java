@@ -1,37 +1,32 @@
 package worldline.ssm.rd.ux.wltwitter;
 
 import android.app.Activity;
-import android.app.FragmentTransaction;
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import worldline.ssm.rd.ux.wltwitter.async.RetrieveTweetsAsyncTask;
-import worldline.ssm.rd.ux.wltwitter.fragments.TweetsFragment;
 import worldline.ssm.rd.ux.wltwitter.utils.PreferenceHandler;
 
 
-public class WLTwitterActivity extends Activity implements TweetsFragment.TweetsInterfaceListener{
-    @Override
+public class WLTwitterActivity extends Activity {
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //Subtitle setup
         String login = getIntent().getExtras().getString("login"); //Get string stored in intent's extras
+
         try {
             getActionBar().setSubtitle(login); //Set subtitle to be that string
         } catch (NullPointerException e) {
             e.printStackTrace();
         }
 
+        RetrieveTweetsAsyncTask task = new RetrieveTweetsAsyncTask();
+        task.execute(login);
 
-        FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-
-        fragmentTransaction.add(R.id.main_activity_layout, new TweetsFragment(login)).commit();
     }
 
 
@@ -68,10 +63,5 @@ public class WLTwitterActivity extends Activity implements TweetsFragment.Tweets
         PreferenceHandler.clearPref();
 
         finish();//Finish this activity => go back to previous (login)
-    }
-
-    @Override
-    public void tweetsInterfaceListener() {
-
     }
 }
