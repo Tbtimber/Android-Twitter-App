@@ -15,6 +15,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 
 import java.util.List;
 
@@ -56,14 +57,18 @@ public class TweetFragment extends Fragment implements TweetChangeListener, Adap
         View rootView = inflater.inflate(R.layout.fragment_tweet, container, false);
         mListView = (ListView) rootView.findViewById(R.id.tweetsListView);
         mListView.setOnItemClickListener(this);
+        final RelativeLayout relativeLayout = new RelativeLayout(getActivity());
+        relativeLayout.setLayoutParams(new ActionBar.LayoutParams(ActionBar.LayoutParams.MATCH_PARENT,ActionBar.LayoutParams.MATCH_PARENT, Gravity.CENTER));
+        relativeLayout.setBackgroundColor(getResources().getColor(R.color.blue_twitter));
         final ProgressBar progressBar = new ProgressBar(getActivity());
         progressBar.setLayoutParams(new ActionBar.LayoutParams(ActionBar.LayoutParams.WRAP_CONTENT,
                 ActionBar.LayoutParams.WRAP_CONTENT, Gravity.CENTER));
         progressBar.setIndeterminate(true);
+        relativeLayout.addView(progressBar);
+        mListView.setEmptyView(relativeLayout);
 
-        mListView.setEmptyView(progressBar);
         ViewGroup root = (ViewGroup) rootView.findViewById(R.id.tweetsRootRelativeLayout);
-        root.addView(progressBar);
+        root.addView(relativeLayout);
         return rootView;
     }
 
