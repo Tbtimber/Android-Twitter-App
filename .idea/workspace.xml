@@ -26,45 +26,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a61cb3e-d445-4e54-8e29-e05cb640c3a2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/worldline/ssm/rd/ux/wltwitter/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/worldline/ssm/rd/ux/wltwitter/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/worldline/ssm/rd/ux/wltwitter/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/worldline/ssm/rd/ux/wltwitter/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/worldline/ssm/rd/ux/wltwitter/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/worldline/ssm/rd/ux/wltwitter/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/worldline/ssm/rd/ux/wltwitter/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/worldline/ssm/rd/ux/wltwitter/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/worldline/ssm/rd/ux/wltwitter/R$integer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/worldline/ssm/rd/ux/wltwitter/R$integer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/worldline/ssm/rd/ux/wltwitter/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/worldline/ssm/rd/ux/wltwitter/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/worldline/ssm/rd/ux/wltwitter/R$menu.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/worldline/ssm/rd/ux/wltwitter/R$menu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/worldline/ssm/rd/ux/wltwitter/R$mipmap.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/worldline/ssm/rd/ux/wltwitter/R$mipmap.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/worldline/ssm/rd/ux/wltwitter/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/worldline/ssm/rd/ux/wltwitter/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/worldline/ssm/rd/ux/wltwitter/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/worldline/ssm/rd/ux/wltwitter/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/worldline/ssm/rd/ux/wltwitter/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/worldline/ssm/rd/ux/wltwitter/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/worldline/ssm/rd/ux/wltwitter/R.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/worldline/ssm/rd/ux/wltwitter/R.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/worldline/ssm/rd/ux/wltwitter/TweetFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/worldline/ssm/rd/ux/wltwitter/TweetFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/worldline/ssm/rd/ux/wltwitter/interfaces/TweetListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/worldline/ssm/rd/ux/wltwitter/interfaces/TweetListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/worldline/ssm/rd/ux/wltwitter/WLTwitterActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/worldline/ssm/rd/ux/wltwitter/WLTwitterActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/worldline/ssm/rd/ux/wltwitter/WLTwitterLoginActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/worldline/ssm/rd/ux/wltwitter/WLTwitterLoginActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/worldline/ssm/rd/ux/wltwitter/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/worldline/ssm/rd/ux/wltwitter/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/worldline/ssm/rd/ux/wltwitter/TweetFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/worldline/ssm/rd/ux/wltwitter/TweetFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/worldline/ssm/rd/ux/wltwitter/interfaces/TweetListener.java" afterPath="$PROJECT_DIR$/app/src/main/java/worldline/ssm/rd/ux/wltwitter/interfaces/TweetListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/worldline/ssm/rd/ux/wltwitter/WLTwitterActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/worldline/ssm/rd/ux/wltwitter/WLTwitterActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/worldline/ssm/rd/ux/wltwitter/WLTwitterLoginActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/worldline/ssm/rd/ux/wltwitter/WLTwitterLoginActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/color.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/color.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/fragment_tweet.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/fragment_tweet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_tweet.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_tweet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResourcesdebug/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResourcesdebug/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" />
+    <list default="true" id="3a61cb3e-d445-4e54-8e29-e05cb640c3a2" name="Default" comment="Blue screen while wiaiting plus grey screen on TweetRetrieved set up">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WLTwitterStep0.iws" />
@@ -184,7 +146,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/worldline/ssm/rd/ux/wltwitter/interfaces/TweetListener.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+              <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -2146,7 +2108,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449921343876</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Blue screen while wiaiting plus grey screen on TweetRetrieved set up">
+      <created>1450173272818</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1450173272818</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView">
@@ -2206,6 +2174,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <MESSAGE value="Practical work done&#10;" />
     <MESSAGE value="Pref now handled by PreferenceHandler (in utils)&#10;" />
     <MESSAGE value="Added &quot;remember me&quot; Option on login activty&#10;+ added async task to retrieve tweets !&#10;" />
@@ -2213,7 +2182,8 @@
     <MESSAGE value="V2.0: TP2 part1 done (AsyncTask)" />
     <MESSAGE value="Practical 2 done !!!" />
     <MESSAGE value="Added blue screen while waiting for tweets, progress Bar is misplace (no clue how to solve it yet)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added blue screen while waiting for tweets, progress Bar is misplace (no clue how to solve it yet)" />
+    <MESSAGE value="Blue screen while wiaiting plus grey screen on TweetRetrieved set up" />
+    <option name="LAST_COMMIT_MESSAGE" value="Blue screen while wiaiting plus grey screen on TweetRetrieved set up" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2568,7 +2538,7 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/worldline/ssm/rd/ux/wltwitter/interfaces/TweetListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
           <folding />
         </state>
       </provider>
