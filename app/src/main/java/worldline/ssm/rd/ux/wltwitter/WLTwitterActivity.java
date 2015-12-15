@@ -28,11 +28,18 @@ public class WLTwitterActivity extends Activity implements TweetListener {
     }
 
     @Override
+    public void onTweetRetrieved() {
+        findViewById(R.id.main_activity_layout).setBackgroundColor(getResources().getColor(R.color.dark_gray_twitter));
+
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         //Subtitle setup
-        String login = getIntent().getExtras().getString("login"); //Get string stored in intent's extras
+        String login = getIntent().getExtras().getString(getString(R.string.key_login)); //Get string stored in intent's extras
 
         try {
             getActionBar().setSubtitle(login); //Set subtitle to be that string
@@ -42,6 +49,7 @@ public class WLTwitterActivity extends Activity implements TweetListener {
 
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        findViewById(R.id.main_activity_layout).setBackgroundColor(getResources().getColor(R.color.blue_twitter));
 
         TweetFragment fragment = new TweetFragment();
         fragmentTransaction.add(R.id.main_activity_layout, fragment).commit();
@@ -71,12 +79,6 @@ public class WLTwitterActivity extends Activity implements TweetListener {
         return super.onOptionsItemSelected(item);
     }
     public void logout() {
-        //Delete previous log info in preferences
-        //Context context = getApplication();
-        //SharedPreferences prefs = context.getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
-        //SharedPreferences.Editor editor =  prefs.edit();
-        //editor.clear(); //Clear all preferences
-        //editor.commit(); //Apply changes
 
         PreferenceHandler.clearPref();
 

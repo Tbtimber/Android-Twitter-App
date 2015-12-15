@@ -26,13 +26,11 @@ public class WLTwitterLoginActivity extends Activity implements View.OnClickList
 
         findViewById(R.id.loginButton).setOnClickListener(this);
 
-        //Context context = getApplication();
-        //SharedPreferences sharedPref = context.getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
-        //if ((sharedPref.getString("login", "null") != "null") && (sharedPref.getString("password", "null") != "null")) {
-        if((PreferenceHandler.getPref("login") != null) && (PreferenceHandler.getPref("password") != null)) {
+
+        if((PreferenceHandler.getPref(getString(R.string.key_login)) != null) && (PreferenceHandler.getPref(getString(R.string.key_password)) != null)) {
             Intent intent = new Intent(getApplicationContext(), WLTwitterActivity.class);
             Bundle extras = new Bundle();
-            extras.putString("login", PreferenceHandler.getPref("login"));
+            extras.putString(getString(R.string.key_login), PreferenceHandler.getPref(getString(R.string.key_login)));
             intent.putExtras(extras);
             startActivity(intent);
         }
@@ -49,25 +47,17 @@ public class WLTwitterLoginActivity extends Activity implements View.OnClickList
         //If they are empty Toast the shit out the users
         if(TextUtils.isEmpty(loginText.getText()) || TextUtils.isEmpty(passWordText.getText())) {
             //Toast Error message
-            Toast.makeText(this, "Error", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, getString(R.string.toast_error_login), Toast.LENGTH_LONG).show();
         } else {
-            //Create new SharedParameters
-            //Context context = getApplication();
-            //SharedPreferences prefs = context.getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
-            //SharedPreferences.Editor editor = prefs.edit(); //Get editor
-            //Create/Change preferences parameter
-            //editor.putString("login", loginText.getText().toString());
-            //editor.putString("password", passWordText.getText().toString());
-            //editor.commit(); //Apply changes to sharedpreference
             if(((CheckBox)findViewById(R.id.rememberMe)).isChecked()) {
-                PreferenceHandler.addPref("login", loginText.getText().toString());
-                PreferenceHandler.addPref("password", passWordText.getText().toString());
+                PreferenceHandler.addPref(getString(R.string.key_login), loginText.getText().toString());
+                PreferenceHandler.addPref(getString(R.string.key_password), passWordText.getText().toString());
             }
 
             //Create and send Intent
             Intent intent = new Intent(getApplicationContext(), WLTwitterActivity.class);
             Bundle extras = new Bundle(); //Create a bundle
-            extras.putString( "login" ,loginText.getText().toString()); //Fill bundle extras with login text
+            extras.putString( getString(R.string.key_login) ,loginText.getText().toString()); //Fill bundle extras with login text
             intent.putExtras(extras); //Add bundle to intent
             startActivity(intent); //Activate intent
            // finish(); //Finish this activity
