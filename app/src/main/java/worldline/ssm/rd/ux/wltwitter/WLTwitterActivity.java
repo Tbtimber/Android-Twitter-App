@@ -1,9 +1,11 @@
 package worldline.ssm.rd.ux.wltwitter;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -29,6 +31,7 @@ public class WLTwitterActivity extends Activity implements TweetListener {
 
     @Override
     public void onTweetRetrieved() {
+        //pour changer la couleur entourant la listView du fragment
        // findViewById(R.id.main_activity_layout).setBackgroundColor(getResources().getColor(R.color.dark_gray_twitter));
         findViewById(R.id.main_activity_layout).setBackgroundColor(getResources().getColor(R.color.blue_twitter));
     }

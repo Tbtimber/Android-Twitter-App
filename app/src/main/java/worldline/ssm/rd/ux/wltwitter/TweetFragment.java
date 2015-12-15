@@ -88,9 +88,9 @@ public class TweetFragment extends Fragment implements TweetChangeListener, Adap
     public void onTweetRetrieved(List<Tweet> tweets) {
         final ArrayAdapter<Tweet> adapter = new ArrayAdapter<Tweet>(getActivity(), android.R.layout.simple_list_item_1, tweets);
         mListView.setBackgroundColor(getResources().getColor(R.color.light_blue_twitter));
+        mListView.setBackground(getResources().getDrawable(R.drawable.fragment_tweet_drawable));
         mListener.onTweetRetrieved();
         mListView.setAdapter(adapter);
-
     }
 
     @Override

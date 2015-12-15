@@ -28,11 +28,7 @@ public class WLTwitterLoginActivity extends Activity implements View.OnClickList
 
 
         if((PreferenceHandler.getPref(getString(R.string.key_login)) != null) && (PreferenceHandler.getPref(getString(R.string.key_password)) != null)) {
-            Intent intent = new Intent(getApplicationContext(), WLTwitterActivity.class);
-            Bundle extras = new Bundle();
-            extras.putString(getString(R.string.key_login), PreferenceHandler.getPref(getString(R.string.key_login)));
-            intent.putExtras(extras);
-            startActivity(intent);
+            startActivity(this.getMainActivityIntent(PreferenceHandler.getPref(getString(R.string.key_login)))); //Activate intent
         }
 
 
@@ -54,13 +50,16 @@ public class WLTwitterLoginActivity extends Activity implements View.OnClickList
                 PreferenceHandler.addPref(getString(R.string.key_password), passWordText.getText().toString());
             }
 
-            //Create and send Intent
-            Intent intent = new Intent(getApplicationContext(), WLTwitterActivity.class);
-            Bundle extras = new Bundle(); //Create a bundle
-            extras.putString( getString(R.string.key_login) ,loginText.getText().toString()); //Fill bundle extras with login text
-            intent.putExtras(extras); //Add bundle to intent
-            startActivity(intent); //Activate intent
+            startActivity(this.getMainActivityIntent(loginText.getText().toString())); //Activate intent
            // finish(); //Finish this activity
         }
+    }
+
+    public Intent getMainActivityIntent(String login) {
+        Intent intent = new Intent(getApplicationContext(), WLTwitterActivity.class);
+        Bundle extras = new Bundle();
+        extras.putString(getResources().getString(R.string.key_login), login);
+        intent.putExtras(extras);
+        return intent;
     }
 }
