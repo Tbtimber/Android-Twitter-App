@@ -29,8 +29,8 @@ public class WLTwitterActivity extends Activity implements TweetListener {
 
     @Override
     public void onTweetRetrieved() {
-        findViewById(R.id.main_activity_layout).setBackgroundColor(getResources().getColor(R.color.dark_gray_twitter));
-
+       // findViewById(R.id.main_activity_layout).setBackgroundColor(getResources().getColor(R.color.dark_gray_twitter));
+        findViewById(R.id.main_activity_layout).setBackgroundColor(getResources().getColor(R.color.blue_twitter));
     }
 
     @Override

@@ -37,6 +37,7 @@
     <color name="button_material_light">#ffd6d7d7</color>
     <!-- From: file:/D:/ISEN/M1/Android/Project/WLTwitterStep0/app/src/main/res/values/color.xml -->
     <eat-comment/>
+    <color name="dark_blue_twitter">#FF6666FF</color>
     <color name="dark_gray_twitter">#FF888888</color>
     <!-- From: file:/D:/ISEN/M1/Android/Project/WLTwitterStep0/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
@@ -53,6 +54,11 @@
     <color name="highlighted_text_material_light">#66009688</color>
     <color name="hint_foreground_material_dark">@color/bright_foreground_disabled_material_dark</color>
     <color name="hint_foreground_material_light">@color/bright_foreground_disabled_material_light</color>
+    <!-- From: file:/D:/ISEN/M1/Android/Project/WLTwitterStep0/app/src/main/res/values/color.xml -->
+    <eat-comment/>
+    <color name="light_blue_twitter">#FFFFFFFF</color>
+    <!-- From: file:/D:/ISEN/M1/Android/Project/WLTwitterStep0/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <eat-comment/>
     <color name="link_text_material_dark">@color/material_deep_teal_200</color>
     <color name="link_text_material_light">@color/material_deep_teal_500</color>
     <color name="material_blue_grey_800">#ff37474f</color>

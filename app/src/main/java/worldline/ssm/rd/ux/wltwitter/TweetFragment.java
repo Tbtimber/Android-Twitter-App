@@ -29,6 +29,7 @@ public class TweetFragment extends Fragment implements TweetChangeListener, Adap
     private ListView mListView;
     private RetrieveTweetsAsyncTask mAsyncTask;
     private TweetListener mListener;
+    private String login;
     @Override
     public void onAttach(Activity activity) {
         //attach fragment to activity + setListener of the fragment from the TweetActivity
@@ -36,13 +37,15 @@ public class TweetFragment extends Fragment implements TweetChangeListener, Adap
         if(activity instanceof TweetListener) {
             mListener = (TweetListener) activity;
         }
+        login = activity.getActionBar().getSubtitle().toString();
     }
 
     @Override
     public void onStart() {
         super.onStart();
 
-        final String login = PreferenceHandler.getPref("login");
+
+        //final String login = PreferenceHandler.getPref("login");
 
         if(!TextUtils.isEmpty(login)) {
             mAsyncTask = new RetrieveTweetsAsyncTask(this);
@@ -84,7 +87,7 @@ public class TweetFragment extends Fragment implements TweetChangeListener, Adap
     @Override
     public void onTweetRetrieved(List<Tweet> tweets) {
         final ArrayAdapter<Tweet> adapter = new ArrayAdapter<Tweet>(getActivity(), android.R.layout.simple_list_item_1, tweets);
-        mListView.setBackgroundColor(getResources().getColor(R.color.grey_twitter));
+        mListView.setBackgroundColor(getResources().getColor(R.color.light_blue_twitter));
         mListener.onTweetRetrieved();
         mListView.setAdapter(adapter);
 
