@@ -1490,20 +1490,21 @@ containing a value of this type.
         public static final int hello_world=0x7f07001c;
         public static final int key_login=0x7f07001d;
         public static final int key_password=0x7f07001e;
-        public static final int login=0x7f07001f;
-        public static final int loginHint=0x7f070020;
-        public static final int logout=0x7f070021;
-        public static final int passwordHint=0x7f070022;
-        public static final int permission_rationale=0x7f070023;
-        public static final int preference_file_key=0x7f070024;
-        public static final int prompt_email=0x7f070025;
-        public static final int prompt_password=0x7f070026;
-        public static final int remember_me=0x7f070027;
-        public static final int reply=0x7f070028;
-        public static final int retweet=0x7f070029;
-        public static final int star=0x7f07002a;
-        public static final int title_activity_wltwitter_login=0x7f07002b;
-        public static final int toast_error_login=0x7f07002c;
+        public static final int key_tweet=0x7f07001f;
+        public static final int login=0x7f070020;
+        public static final int loginHint=0x7f070021;
+        public static final int logout=0x7f070022;
+        public static final int passwordHint=0x7f070023;
+        public static final int permission_rationale=0x7f070024;
+        public static final int preference_file_key=0x7f070025;
+        public static final int prompt_email=0x7f070026;
+        public static final int prompt_password=0x7f070027;
+        public static final int remember_me=0x7f070028;
+        public static final int reply=0x7f070029;
+        public static final int retweet=0x7f07002a;
+        public static final int star=0x7f07002b;
+        public static final int title_activity_wltwitter_login=0x7f07002c;
+        public static final int toast_error_login=0x7f07002d;
     }
     public static final class style {
         /**  API 11 theme customizations can go here. 

@@ -8,10 +8,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import worldline.ssm.rd.ux.wltwitter.pojo.Tweet;
+
 /**
  * Created by Matthieu on 17/12/2015.
  */
 public class OneTweetFragment extends Fragment {
+    final static private String TWEET_KEY = "tweet";
+
+    public static OneTweetFragment newInstance(Tweet tweet) {
+        final OneTweetFragment fragment = new OneTweetFragment();
+        final Bundle argument = new Bundle();
+        argument.putParcelable(TWEET_KEY, tweet);
+    }
+
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);

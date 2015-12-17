@@ -42,6 +42,9 @@
     <!-- PrefHandler key Strings -->
     <string name="key_login">login</string>
     <string name="key_password">password</string>
+
+    <!-- Miscelleneaous key strings -->
+    <string name="key_tweet">tweet</string>
     
     <!-- one_tweet_frag strings -->
     <string name="reply">Reply</string>

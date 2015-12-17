@@ -209,6 +209,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="key_login">login</string>
     <string name="key_password">password</string>
+    <string name="key_tweet">tweet</string>
     <string name="login">Sign in</string>
     <string name="loginHint">Your Twitter login</string>
     <string name="logout">Logout</string>
