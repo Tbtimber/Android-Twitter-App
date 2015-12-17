@@ -159,7 +159,7 @@ public class TwitterHelper {
 
 		// Build 20 Tweets
 		for(int i=0; i<20; i++) {
-			final Tweet tweet = new Tweet();
+			final Tweet tweet = null;//new Tweet();
 			tweet.text = "Tweet #" + i;
 			tweet.user = user;
 			tweets.add(tweet);

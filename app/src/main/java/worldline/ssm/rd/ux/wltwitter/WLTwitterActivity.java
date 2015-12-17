@@ -13,14 +13,37 @@ import android.widget.Toast;
 
 
 import worldline.ssm.rd.ux.wltwitter.async.RetrieveTweetsAsyncTask;
+import worldline.ssm.rd.ux.wltwitter.interfaces.OneTweetListener;
 import worldline.ssm.rd.ux.wltwitter.interfaces.TweetListener;
 import worldline.ssm.rd.ux.wltwitter.pojo.Tweet;
 import worldline.ssm.rd.ux.wltwitter.utils.PreferenceHandler;
 
 
-public class WLTwitterActivity extends Activity implements TweetListener {
+public class WLTwitterActivity extends Activity implements TweetListener,OneTweetListener {
     private TweetFragment mtweetFragment;
     private OneTweetFragment mOneTweetFrag;
+
+    @Override
+    public void onRetweetClick(Tweet tweet) {
+        Toast.makeText(this, "RT: " + tweet.text, Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void onReplyClick(Tweet tweet) {
+        Toast.makeText(this, "Reply: " + tweet.text, Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void onOutOf() {
+        detachOneTFragment();
+        attachListViewFragment();
+    }
+
+    @Override
+    public void onStarClick(Tweet tweet) {
+        Toast.makeText(this, "Star: " + tweet.text, Toast.LENGTH_LONG).show();
+    }
+
     @Override
     public void onRetweet(Tweet tweet) {
         Toast.makeText(this, "RT " + tweet.text, Toast.LENGTH_LONG).show();
@@ -30,7 +53,7 @@ public class WLTwitterActivity extends Activity implements TweetListener {
     public void onViewTweet(Tweet tweet) {
         //Toast.makeText(this, tweet.text, Toast.LENGTH_LONG).show();
         detachListViewFragment();
-        attachOneTFragment();
+        attachOneTFragment(tweet);
     }
 
     @Override
@@ -74,11 +97,11 @@ public class WLTwitterActivity extends Activity implements TweetListener {
         }
         fragmentTransaction.add(R.id.main_activity_layout, mtweetFragment).commit();
     }
-    public void attachOneTFragment() {
+    public void attachOneTFragment(Tweet tweet) {
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         if(mOneTweetFrag == null) {
-            mOneTweetFrag = new OneTweetFragment();
+            mOneTweetFrag = OneTweetFragment.newInstance(tweet);
         }
         fragmentTransaction.add(R.id.main_activity_layout, mOneTweetFrag).commit();
     }
