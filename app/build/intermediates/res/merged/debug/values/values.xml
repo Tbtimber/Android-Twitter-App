@@ -220,6 +220,9 @@
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
     <string name="remember_me">Remember me</string>
+    <string name="reply">Reply</string>
+    <string name="retweet">Retweet</string>
+    <string name="star">Star</string>
     <string name="title_activity_wltwitter_login">Login</string>
     <string name="toast_error_login">Error: Login or Password field is empty</string>
     <!-- From: file:/D:/ISEN/M1/Android/Project/WLTwitterStep0/app/src/main/res/values/styles.xml -->

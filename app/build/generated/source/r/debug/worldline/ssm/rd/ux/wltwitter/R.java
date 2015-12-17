@@ -1326,12 +1326,13 @@ containing a value of this type.
         public static final int blue_white_text_selector=0x7f020034;
         public static final int fragment_tweet_drawable=0x7f020035;
         public static final int ic_launcher=0x7f020036;
-        public static final int twitter=0x7f020037;
-        public static final int white_blue_round_corners_selector=0x7f020038;
-        public static final int white_round_corners_background=0x7f020039;
+        public static final int list_rectangle=0x7f020037;
+        public static final int twitter=0x7f020038;
+        public static final int white_blue_round_corners_selector=0x7f020039;
+        public static final int white_round_corners_background=0x7f02003a;
     }
     public static final class id {
-        public static final int actionLogout=0x7f0d0047;
+        public static final int actionLogout=0x7f0d0053;
         public static final int action_bar=0x7f0d0031;
         public static final int action_bar_activity_content=0x7f0d0000;
         public static final int action_bar_container=0x7f0d0030;
@@ -1346,6 +1347,12 @@ containing a value of this type.
         public static final int action_mode_bar_stub=0x7f0d002d;
         public static final int action_mode_close_button=0x7f0d0020;
         public static final int activity_chooser_view_content=0x7f0d0021;
+        public static final int adapter_image=0x7f0d004d;
+        public static final int adapter_rt_button=0x7f0d0050;
+        public static final int adapter_text_bottom=0x7f0d004e;
+        public static final int adapter_text_left=0x7f0d0051;
+        public static final int adapter_text_right=0x7f0d004f;
+        public static final int alias_one_t_frag=0x7f0d0048;
         public static final int always=0x7f0d0016;
         public static final int beginning=0x7f0d0013;
         public static final int checkbox=0x7f0d0029;
@@ -1364,11 +1371,12 @@ containing a value of this type.
         public static final int icon=0x7f0d0026;
         public static final int ifRoom=0x7f0d0018;
         public static final int image=0x7f0d0023;
+        public static final int image_one_t_frag=0x7f0d0046;
         public static final int listMode=0x7f0d0009;
         public static final int list_item=0x7f0d0025;
         public static final int loginButton=0x7f0d0041;
         public static final int loginEditText=0x7f0d003f;
-        public static final int logout_setting=0x7f0d0046;
+        public static final int logout_setting=0x7f0d0052;
         public static final int main_activity_layout=0x7f0d0043;
         public static final int middle=0x7f0d0015;
         public static final int never=0x7f0d0019;
@@ -1379,6 +1387,8 @@ containing a value of this type.
         public static final int progress_horizontal=0x7f0d0006;
         public static final int radio=0x7f0d002b;
         public static final int rememberMe=0x7f0d0042;
+        public static final int reply_one_t_frag=0x7f0d004a;
+        public static final int retweet_one_t_frag=0x7f0d004b;
         public static final int search_badge=0x7f0d0035;
         public static final int search_bar=0x7f0d0034;
         public static final int search_button=0x7f0d0036;
@@ -1394,13 +1404,16 @@ containing a value of this type.
         public static final int showHome=0x7f0d0010;
         public static final int showTitle=0x7f0d0011;
         public static final int split_action_bar=0x7f0d0007;
+        public static final int star_one_t_frag=0x7f0d004c;
         public static final int submit_area=0x7f0d003c;
         public static final int tabMode=0x7f0d000b;
+        public static final int text_one_t_frag=0x7f0d0049;
         public static final int title=0x7f0d0027;
         public static final int tweetsListView=0x7f0d0045;
         public static final int tweetsRootRelativeLayout=0x7f0d0044;
         public static final int up=0x7f0d0008;
         public static final int useLogo=0x7f0d0012;
+        public static final int userName_one_t_frag=0x7f0d0047;
         public static final int withText=0x7f0d001a;
         public static final int wrap_content=0x7f0d001d;
     }
@@ -1434,7 +1447,9 @@ containing a value of this type.
         public static final int activity_login_layout=0x7f040017;
         public static final int activity_main=0x7f040018;
         public static final int fragment_tweet=0x7f040019;
-        public static final int support_simple_spinner_dropdown_item=0x7f04001a;
+        public static final int one_tweet_fragment_layout=0x7f04001a;
+        public static final int support_simple_spinner_dropdown_item=0x7f04001b;
+        public static final int tweet_adapter_layout=0x7f04001c;
     }
     public static final class menu {
         public static final int menu_main=0x7f0e0000;
@@ -1484,8 +1499,11 @@ containing a value of this type.
         public static final int prompt_email=0x7f070025;
         public static final int prompt_password=0x7f070026;
         public static final int remember_me=0x7f070027;
-        public static final int title_activity_wltwitter_login=0x7f070028;
-        public static final int toast_error_login=0x7f070029;
+        public static final int reply=0x7f070028;
+        public static final int retweet=0x7f070029;
+        public static final int star=0x7f07002a;
+        public static final int title_activity_wltwitter_login=0x7f07002b;
+        public static final int toast_error_login=0x7f07002c;
     }
     public static final class style {
         /**  API 11 theme customizations can go here. 

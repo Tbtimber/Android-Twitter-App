@@ -3,15 +3,26 @@
     <item >
         <shape
             android:shape="rectangle">
-            <solid android:color="@color/dark_gray_twitter" />
-            <corners android:radius="5dp"/>
+            <solid android:color="#77000000" />
+            <corners
+                android:bottomLeftRadius="@dimen/round_corner_size"
+                android:bottomRightRadius="@dimen/round_corner_size"
+                android:radius="1dp"
+                android:topLeftRadius="@dimen/round_corner_size"
+                android:topRightRadius="@dimen/round_corner_size"/>
         </shape>
     </item>
-    <item android:right="1dp" android:left="1dp" android:bottom="2dp">
+    <item android:right="1dp" android:left="0dp" android:bottom="2dp">
         <shape
             android:shape="rectangle">
-            <solid android:color="@color/light_blue_twitter"/>
-            <corners android:radius="5dp"/>
+            <solid android:color="@color/blue_twitter"/>
+            <corners
+                android:bottomLeftRadius="@dimen/round_corner_size"
+                android:bottomRightRadius="@dimen/round_corner_size"
+                android:radius="1dp"
+                android:topLeftRadius="@dimen/round_corner_size"
+                android:topRightRadius="@dimen/round_corner_size"/>
+
         </shape>
     </item>
 </layer-list>

@@ -19,21 +19,27 @@ import worldline.ssm.rd.ux.wltwitter.utils.PreferenceHandler;
 
 
 public class WLTwitterActivity extends Activity implements TweetListener {
+    private TweetFragment mtweetFragment;
+    private OneTweetFragment mOneTweetFrag;
     @Override
     public void onRetweet(Tweet tweet) {
-
+        Toast.makeText(this, "RT " + tweet.text, Toast.LENGTH_LONG).show();
     }
 
     @Override
     public void onViewTweet(Tweet tweet) {
-        Toast.makeText(this, tweet.text, Toast.LENGTH_LONG).show();
+        //Toast.makeText(this, tweet.text, Toast.LENGTH_LONG).show();
+        detachListViewFragment();
+        attachOneTFragment();
     }
 
     @Override
     public void onTweetRetrieved() {
+
         //pour changer la couleur entourant la listView du fragment
-       // findViewById(R.id.main_activity_layout).setBackgroundColor(getResources().getColor(R.color.dark_gray_twitter));
-        findViewById(R.id.main_activity_layout).setBackgroundColor(getResources().getColor(R.color.blue_twitter));
+       findViewById(R.id.main_activity_layout).setBackgroundColor(getResources().getColor(R.color.dark_gray_twitter));
+        //findViewById(R.id.main_activity_layout).setBackgroundColor(getResources().getColor(R.color.blue_twitter));
+
     }
 
     @Override
@@ -50,15 +56,37 @@ public class WLTwitterActivity extends Activity implements TweetListener {
             e.printStackTrace();
         }
 
+
+        findViewById(R.id.main_activity_layout).setBackgroundColor(getResources().getColor(R.color.blue_twitter));
+        attachListViewFragment();
+
+    }
+    public void detachListViewFragment() {
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        findViewById(R.id.main_activity_layout).setBackgroundColor(getResources().getColor(R.color.blue_twitter));
-
-        TweetFragment fragment = new TweetFragment();
-        fragmentTransaction.add(R.id.main_activity_layout, fragment).commit();
+        fragmentTransaction.detach(this.mtweetFragment).commit();
     }
-
-
+    public void attachListViewFragment() {
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        if(mtweetFragment == null) {
+            this.mtweetFragment = new TweetFragment();
+        }
+        fragmentTransaction.add(R.id.main_activity_layout, mtweetFragment).commit();
+    }
+    public void attachOneTFragment() {
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        if(mOneTweetFrag == null) {
+            mOneTweetFrag = new OneTweetFragment();
+        }
+        fragmentTransaction.add(R.id.main_activity_layout, mOneTweetFrag).commit();
+    }
+    public void detachOneTFragment() {
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.detach(mOneTweetFrag).commit();
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

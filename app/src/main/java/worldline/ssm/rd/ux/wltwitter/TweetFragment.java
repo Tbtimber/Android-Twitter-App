@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,6 +31,7 @@ public class TweetFragment extends Fragment implements TweetChangeListener, Adap
     private RetrieveTweetsAsyncTask mAsyncTask;
     private TweetListener mListener;
     private String login;
+
     @Override
     public void onAttach(Activity activity) {
         //attach fragment to activity + setListener of the fragment from the TweetActivity
@@ -86,11 +88,12 @@ public class TweetFragment extends Fragment implements TweetChangeListener, Adap
 
     @Override
     public void onTweetRetrieved(List<Tweet> tweets) {
-        final ArrayAdapter<Tweet> adapter = new ArrayAdapter<Tweet>(getActivity(), android.R.layout.simple_list_item_1, tweets);
-        mListView.setBackgroundColor(getResources().getColor(R.color.light_blue_twitter));
-        mListView.setBackground(getResources().getDrawable(R.drawable.fragment_tweet_drawable));
+        final TweetsAdapter adapter = new TweetsAdapter(tweets,this,mListener);
+        mListView.setOnItemClickListener(this);
+        mListView.setDividerHeight(10);
         mListener.onTweetRetrieved();
         mListView.setAdapter(adapter);
+
     }
 
     @Override
@@ -98,6 +101,7 @@ public class TweetFragment extends Fragment implements TweetChangeListener, Adap
         if(null != mListener) {
             final Tweet tweet = (Tweet) parent.getItemAtPosition(position);
             mListener.onViewTweet(tweet);
+            Log.i("Listener", "Listener of fragment activated");
         }
     }
 }
