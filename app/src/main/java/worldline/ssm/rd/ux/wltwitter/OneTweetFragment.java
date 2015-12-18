@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.Space;
 import android.widget.TextView;
 
@@ -19,7 +20,7 @@ import worldline.ssm.rd.ux.wltwitter.pojo.Tweet;
 /**
  * Created by Matthieu on 17/12/2015.
  */
-public class OneTweetFragment extends Fragment implements View.OnClickListener {
+public class OneTweetFragment extends Fragment {
     final static private String TWEET_KEY = "tweet";
     private OneTweetListener mListener;
     private Tweet mTweet;
@@ -38,6 +39,7 @@ public class OneTweetFragment extends Fragment implements View.OnClickListener {
         if(activity instanceof OneTweetListener) {
             mListener = (OneTweetListener)activity;
         }
+
 
 
     }
@@ -89,10 +91,8 @@ public class OneTweetFragment extends Fragment implements View.OnClickListener {
                 mListener.onOutOf();
             }
         });*/
-    }
 
-    @Override
-    public void onClick(View v) {
 
     }
+
 }

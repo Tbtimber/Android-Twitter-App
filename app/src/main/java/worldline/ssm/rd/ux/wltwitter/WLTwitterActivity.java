@@ -22,6 +22,7 @@ import worldline.ssm.rd.ux.wltwitter.utils.PreferenceHandler;
 public class WLTwitterActivity extends Activity implements TweetListener,OneTweetListener {
     private TweetFragment mtweetFragment;
     private OneTweetFragment mOneTweetFrag;
+    private boolean isOnTActive;
 
     @Override
     public void onRetweetClick(Tweet tweet) {
@@ -36,6 +37,7 @@ public class WLTwitterActivity extends Activity implements TweetListener,OneTwee
     @Override
     public void onOutOf() {
         detachOneTFragment();
+        isOnTActive = false;
         attachListViewFragment();
     }
 
@@ -96,8 +98,10 @@ public class WLTwitterActivity extends Activity implements TweetListener,OneTwee
             this.mtweetFragment = new TweetFragment();
         }
         fragmentTransaction.add(R.id.main_activity_layout, mtweetFragment).commit();
+        isOnTActive = false;
     }
     public void attachOneTFragment(Tweet tweet) {
+        isOnTActive = true;
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         if(mOneTweetFrag == null) {
@@ -137,5 +141,14 @@ public class WLTwitterActivity extends Activity implements TweetListener,OneTwee
         PreferenceHandler.clearPref();
 
         finish();//Finish this activity => go back to previous (login)
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(isOnTActive) {
+            this.onOutOf();
+        } else {
+            super.onBackPressed();
+        }
     }
 }

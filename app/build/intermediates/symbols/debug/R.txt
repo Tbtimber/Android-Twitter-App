@@ -359,9 +359,10 @@ int drawable blue_white_text_selector 0x7f020034
 int drawable fragment_tweet_drawable 0x7f020035
 int drawable ic_launcher 0x7f020036
 int drawable list_rectangle 0x7f020037
-int drawable twitter 0x7f020038
-int drawable white_blue_round_corners_selector 0x7f020039
-int drawable white_round_corners_background 0x7f02003a
+int drawable one_frag_selecetor 0x7f020038
+int drawable twitter 0x7f020039
+int drawable white_blue_round_corners_selector 0x7f02003a
+int drawable white_round_corners_background 0x7f02003b
 int id actionLogout 0x7f0d0054
 int id action_bar 0x7f0d0031
 int id action_bar_activity_content 0x7f0d0000
