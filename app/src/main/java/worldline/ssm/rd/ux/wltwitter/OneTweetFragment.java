@@ -52,7 +52,7 @@ public class OneTweetFragment extends Fragment implements View.OnClickListener {
         ((TextView)rootView.findViewById(R.id.alias_one_t_frag)).setText("@" + mTweet.user.screenName);
         ((TextView)rootView.findViewById(R.id.text_one_t_frag)).setText(mTweet.text);
 
-
+        setClickActions(rootView);
 
         return rootView;
     }
