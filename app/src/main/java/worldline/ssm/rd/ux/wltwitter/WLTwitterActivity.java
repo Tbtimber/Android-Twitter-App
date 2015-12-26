@@ -94,9 +94,7 @@ public class WLTwitterActivity extends Activity implements TweetListener,OneTwee
     public void attachListViewFragment() {
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        if(mtweetFragment == null) {
-            this.mtweetFragment = new TweetFragment();
-        }
+        this.mtweetFragment = new TweetFragment();
         fragmentTransaction.add(R.id.main_activity_layout, mtweetFragment).commit();
         isOnTActive = false;
     }
