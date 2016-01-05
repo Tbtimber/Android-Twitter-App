@@ -19,6 +19,7 @@ import worldline.ssm.rd.ux.wltwitter.pojo.Tweet;
 
 /**
  * Created by Matthieu on 17/12/2015.
+ * TODO : Add cache system for the picture
  */
 public class OneTweetFragment extends Fragment {
     final static private String TWEET_KEY = "tweet";
