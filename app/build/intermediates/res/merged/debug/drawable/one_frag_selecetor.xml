@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:state_focused="true"
+        android:state_pressed="false"
+        android:color="@android:color/white">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/blue_twitter"/>
+
+            <corners
+                android:bottomLeftRadius="@dimen/round_corner_size"
+                android:bottomRightRadius="@dimen/round_corner_size"
+                android:radius="1dp"
+                android:topLeftRadius="@dimen/round_corner_size"
+                android:topRightRadius="@dimen/round_corner_size" />
+        </shape>
+    </item>
+    <item android:state_focused="true" android:state_pressed="true" android:color="@color/blue_twitter">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/dark_blue_twitter"/>
+
+            <corners
+                android:bottomLeftRadius="@dimen/round_corner_size"
+                android:bottomRightRadius="@dimen/round_corner_size"
+                android:radius="1dp"
+                android:topLeftRadius="@dimen/round_corner_size"
+                android:topRightRadius="@dimen/round_corner_size" />
+        </shape>
+    </item>
+    <item android:state_focused="false" android:state_pressed="true" android:color="@color/blue_twitter">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/dark_blue_twitter" />
+
+            <corners
+                android:bottomLeftRadius="@dimen/round_corner_size"
+                android:bottomRightRadius="@dimen/round_corner_size"
+                android:radius="1dp"
+                android:topLeftRadius="@dimen/round_corner_size"
+                android:topRightRadius="@dimen/round_corner_size" />
+        </shape>
+    </item>
+    <item android:color="@color/blue_twitter">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/blue_twitter"/>
+
+            <corners
+                android:bottomLeftRadius="@dimen/round_corner_size"
+                android:bottomRightRadius="@dimen/round_corner_size"
+                android:radius="1dp"
+                android:topLeftRadius="@dimen/round_corner_size"
+                android:topRightRadius="@dimen/round_corner_size" />
+        </shape>
+    </item>
+
+</selector><!-- From: file:/D:/ISEN/M1/Android/Project/WLTwitterStep0/app/src/main/res/drawable/one_frag_selecetor.xml -->

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@drawable/list_rectangle">
+    <ImageView
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/adapter_image"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:minHeight="40dp"
+        android:minWidth="40dp"
+        android:maxHeight="40dp"
+        android:maxWidth="40dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:textColor="@color/light_blue_twitter"
+        android:textStyle="bold"
+        android:id="@+id/adapter_text_bottom"
+        android:layout_below="@+id/adapter_text_right"
+        android:layout_toRightOf="@+id/adapter_image"
+        android:gravity="top"
+        android:layout_toEndOf="@+id/adapter_image" />
+    <Button
+        android:maxWidth="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RT"
+        android:id="@+id/adapter_rt_button"
+        android:layout_below="@+id/adapter_image"
+        android:layout_toLeftOf="@id/adapter_text_bottom"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/adapter_text_left"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/adapter_image"
+        android:textColor="@color/black_twitter"
+        android:textStyle="bold"
+        android:minWidth="100dp"
+        android:minHeight="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/adapter_text_right"
+        android:textColor="@color/black_twitter"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+
+        android:layout_toRightOf="@+id/adapter_text_left" />
+
+
+</RelativeLayout><!-- From: file:/D:/ISEN/M1/Android/Project/WLTwitterStep0/app/src/main/res/layout/tweet_adapter_layout.xml -->
