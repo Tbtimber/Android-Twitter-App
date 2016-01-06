@@ -102,9 +102,7 @@ public class WLTwitterActivity extends Activity implements TweetListener,OneTwee
         isOnTActive = true;
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        if(mOneTweetFrag == null) {
-            mOneTweetFrag = OneTweetFragment.newInstance(tweet);
-        }
+        mOneTweetFrag = OneTweetFragment.newInstance(tweet);
         fragmentTransaction.add(R.id.main_activity_layout, mOneTweetFrag).commit();
     }
     public void detachOneTFragment() {
