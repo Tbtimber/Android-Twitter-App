@@ -38,13 +38,17 @@ public class Tweet implements Parcelable{
 	public String toString() {
 		return text;
 	}
-	
+
+	public Tweet() {
+	}
+
 	public long getDateCreatedTimestamp(){
 		final SimpleDateFormat dateFormat = new SimpleDateFormat("EEE MMM dd HH:mm:ss ZZZZZ yyyy", Locale.ENGLISH);
 		dateFormat.setLenient(false);
 		try {
 			final Date created = dateFormat.parse(dateCreated);
 			return created.getTime();
+
 		} catch (Exception e) {
 			return 0;
 		}

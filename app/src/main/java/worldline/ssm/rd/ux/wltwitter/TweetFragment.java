@@ -2,8 +2,9 @@ package worldline.ssm.rd.ux.wltwitter;
 
 import android.app.ActionBar;
 import android.app.Activity;
-import android.content.Context;
-import android.net.Uri;
+import android.content.ContentValues;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.text.TextUtils;
@@ -13,18 +14,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.ProgressBar;
-import android.widget.RelativeLayout;
 
 import java.util.List;
 
 import worldline.ssm.rd.ux.wltwitter.async.RetrieveTweetsAsyncTask;
+import worldline.ssm.rd.ux.wltwitter.database.WLTwitterDatabaseContract;
+import worldline.ssm.rd.ux.wltwitter.database.WLTwitterDataBaseHelper;
+import worldline.ssm.rd.ux.wltwitter.database.WLTwitterDatabaseManager;
 import worldline.ssm.rd.ux.wltwitter.interfaces.TweetChangeListener;
 import worldline.ssm.rd.ux.wltwitter.interfaces.TweetListener;
 import worldline.ssm.rd.ux.wltwitter.pojo.Tweet;
-import worldline.ssm.rd.ux.wltwitter.utils.PreferenceHandler;
 
 public class TweetFragment extends Fragment implements TweetChangeListener, AdapterView.OnItemClickListener{
     private ListView mListView;
@@ -88,12 +89,15 @@ public class TweetFragment extends Fragment implements TweetChangeListener, Adap
 
     @Override
     public void onTweetRetrieved(List<Tweet> tweets) {
+        WLTwitterDatabaseManager.testDatabase(tweets);
         final TweetsAdapter adapter = new TweetsAdapter(tweets,this,mListener);
         mListView.setOnItemClickListener(this);
         mListView.setDividerHeight(10);
         mListener.onTweetRetrieved();
         mListView.setAdapter(adapter);
 
+        //Test the DB content !
+        WLTwitterDatabaseManager.testContentProvider(tweets);
     }
 
     @Override
@@ -104,4 +108,5 @@ public class TweetFragment extends Fragment implements TweetChangeListener, Adap
             Log.i("Listener", "Listener of fragment activated");
         }
     }
+
 }
