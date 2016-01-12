@@ -2,7 +2,11 @@ package worldline.ssm.rd.ux.wltwitter;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.app.LoaderManager;
 import android.content.ContentValues;
+import android.content.CursorLoader;
+import android.content.Loader;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
@@ -27,7 +31,7 @@ import worldline.ssm.rd.ux.wltwitter.interfaces.TweetChangeListener;
 import worldline.ssm.rd.ux.wltwitter.interfaces.TweetListener;
 import worldline.ssm.rd.ux.wltwitter.pojo.Tweet;
 
-public class TweetFragment extends Fragment implements TweetChangeListener, AdapterView.OnItemClickListener{
+public class TweetFragment extends Fragment implements TweetChangeListener, AdapterView.OnItemClickListener, LoaderManager.LoaderCallbacks<Cursor>{
     private ListView mListView;
     private RetrieveTweetsAsyncTask mAsyncTask;
     private TweetListener mListener;
@@ -46,8 +50,7 @@ public class TweetFragment extends Fragment implements TweetChangeListener, Adap
     @Override
     public void onStart() {
         super.onStart();
-
-
+        getLoaderManager().initLoader(getId(), null, this);
         //final String login = PreferenceHandler.getPref("login");
 
         if(!TextUtils.isEmpty(login)) {
@@ -97,7 +100,7 @@ public class TweetFragment extends Fragment implements TweetChangeListener, Adap
         mListView.setAdapter(adapter);
 
         //Test the DB content !
-        WLTwitterDatabaseManager.testContentProvider(tweets);
+      //  WLTwitterDatabaseManager.testContentProvider(tweets);
     }
 
     @Override
@@ -109,4 +112,32 @@ public class TweetFragment extends Fragment implements TweetChangeListener, Adap
         }
     }
 
+    @Override
+    public Loader<Cursor> onCreateLoader(int id, Bundle args) {
+        final CursorLoader cursorLoader = new CursorLoader(WLTwitterApplication.getContext());
+        cursorLoader.setUri(WLTwitterDatabaseContract.TWEETS_URI);
+        cursorLoader.setProjection(WLTwitterDatabaseContract.PROJECTION_FULL);
+        cursorLoader.setSelection(null);
+        cursorLoader.setSelectionArgs(null);
+        cursorLoader.setSortOrder(null);
+        return cursorLoader;
+    }
+
+    @Override
+    public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
+        if(null != data) {
+            while (data.moveToNext()) {
+                final Tweet tweet = WLTwitterDatabaseManager.tweetFromCursor(data);
+                Log.d("Tweet Fragment", tweet.toString());
+            }
+            if(!data.isClosed()) {
+                data.close();
+            }
+        }
+    }
+
+    @Override
+    public void onLoaderReset(Loader<Cursor> loader) {
+
+    }
 }

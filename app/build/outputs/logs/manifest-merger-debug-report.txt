@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\ISEN\M1\Android\Project\WLTwitterStep0\app\src\main\AndroidManifest.xml:2:1-34:12
+ADDED from D:\ISEN\M1\Android\Project\WLTwitterStep0\app\src\main\AndroidManifest.xml:2:1-38:12
 	package
 		ADDED from D:\ISEN\M1\Android\Project\WLTwitterStep0\app\src\main\AndroidManifest.xml:3:5-44
 		INJECTED from D:\ISEN\M1\Android\Project\WLTwitterStep0\app\src\main\AndroidManifest.xml
@@ -30,7 +30,7 @@ ADDED from D:\ISEN\M1\Android\Project\WLTwitterStep0\app\src\main\AndroidManifes
 	android:name
 		ADDED from D:\ISEN\M1\Android\Project\WLTwitterStep0\app\src\main\AndroidManifest.xml:9:22-64
 application
-ADDED from D:\ISEN\M1\Android\Project\WLTwitterStep0\app\src\main\AndroidManifest.xml:10:5-32:19
+ADDED from D:\ISEN\M1\Android\Project\WLTwitterStep0\app\src\main\AndroidManifest.xml:10:5-36:19
 MERGED from [com.android.support:appcompat-v7:21.0.3] D:\ISEN\M1\Android\Project\WLTwitterStep0\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\AndroidManifest.xml:16:5-19
 MERGED from [com.android.support:support-v4:21.0.3] D:\ISEN\M1\Android\Project\WLTwitterStep0\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\AndroidManifest.xml:16:5-19
 MERGED from [com.android.support:support-v4:21.0.3] D:\ISEN\M1\Android\Project\WLTwitterStep0\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\AndroidManifest.xml:16:5-19
@@ -72,6 +72,14 @@ category#android.intent.category.LAUNCHER
 ADDED from D:\ISEN\M1\Android\Project\WLTwitterStep0\app\src\main\AndroidManifest.xml:29:17-76
 	android:name
 		ADDED from D:\ISEN\M1\Android\Project\WLTwitterStep0\app\src\main\AndroidManifest.xml:29:27-74
+provider#worldline.ssm.rd.ux.wltwitter.database.WLTwitterDatabaseProvider
+ADDED from D:\ISEN\M1\Android\Project\WLTwitterStep0\app\src\main\AndroidManifest.xml:32:9-35:39
+	android:authorities
+		ADDED from D:\ISEN\M1\Android\Project\WLTwitterStep0\app\src\main\AndroidManifest.xml:33:13-69
+	android:exported
+		ADDED from D:\ISEN\M1\Android\Project\WLTwitterStep0\app\src\main\AndroidManifest.xml:35:13-37
+	android:name
+		ADDED from D:\ISEN\M1\Android\Project\WLTwitterStep0\app\src\main\AndroidManifest.xml:34:13-92
 uses-sdk
 INJECTED from D:\ISEN\M1\Android\Project\WLTwitterStep0\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:21.0.3] D:\ISEN\M1\Android\Project\WLTwitterStep0\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\AndroidManifest.xml:15:5-42

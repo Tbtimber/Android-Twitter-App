@@ -88,7 +88,7 @@ public class WLTwitterDatabaseManager {
         final SQLiteOpenHelper sqLiteOpenHelper = new WLTwitterDataBaseHelper(WLTwitterApplication.getContext());
         final SQLiteDatabase tweetsDatabase = sqLiteOpenHelper.getWritableDatabase();
 
-        //inser the tweets into db
+        //insert the tweets into db
         for(Tweet t : tweets) {
             //Insert content value into DB
             tweetsDatabase.insert(WLTwitterDatabaseContract.TABLE_TWEETS,"",tweetToContentValues(t));
@@ -109,6 +109,14 @@ public class WLTwitterDatabaseManager {
         if(!cursor.isClosed()) {
             cursor.close();
         }
+        /*WLTwitterApplication.getContext().getContentResolver().query(WLTwitterDatabaseContract.TWEETS_URI,
+                WLTwitterDatabaseContract.PROJECTION_FULL, null,null,null);
+
+        WLTwitterApplication.getContext().getContentResolver().insert(WLTwitterDatabaseContract.TWEETS_URI, null);
+
+        WLTwitterApplication.getContext().getContentResolver().update(WLTwitterDatabaseContract.TWEETS_URI, null, null, null);
+
+        WLTwitterApplication.getContext().getContentResolver().delete(WLTwitterDatabaseContract.TWEETS_URI, null, null);*/
 
     }
 

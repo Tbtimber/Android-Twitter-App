@@ -37,6 +37,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <provider
+            android:name="worldline.ssm.rd.ux.wltwitter.database.WLTwitterDatabaseProvider"
+            android:authorities="worldline.ssm.rd.ux.TweetAuthority"
+            android:exported="false" />
     </application>
 
 </manifest>
