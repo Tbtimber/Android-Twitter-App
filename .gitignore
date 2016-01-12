@@ -45,3 +45,18 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 921b19b04dea7648e0884194fa4c9f9f595d6245
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+<<<<<<< HEAD
+/build
+=======
+/build
+>>>>>>> 921b19b04dea7648e0884194fa4c9f9f595d6245

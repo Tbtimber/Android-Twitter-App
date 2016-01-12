@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/main_layout_one_t_frag"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_round_corners_background"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <ImageView
+            android:id="@+id/image_one_t_frag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:minHeight="100dp"
+            android:minWidth="100dp"
+            />
+        <TextView
+            android:id="@+id/userName_one_t_frag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/image_one_t_frag"
+            android:layout_alignTop="@id/image_one_t_frag"
+            android:text="Bondour"/>
+        <TextView
+            android:id="@+id/alias_one_t_frag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/image_one_t_frag"
+            android:layout_alignBottom="@id/image_one_t_frag"
+            android:text="Ta va Biennn ?"
+            />
+        <TextView
+            android:id="@+id/text_one_t_frag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_below="@id/image_one_t_frag"
+            android:text="Je suis le texte du tweet !!! essayons avec beaucoup de vharactères histoire de !"
+            />
+
+            <Button
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/reply_one_t_frag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_one_t_frag"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/one_frag_selecetor"
+                android:text="@string/reply"
+                android:textColor="@color/light_blue_twitter"
+                />
+            <Button
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/text_one_t_frag"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/retweet_one_t_frag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/one_frag_selecetor"
+                android:text="@string/retweet"
+                android:textColor="@color/light_blue_twitter"
+                />
+            <Button
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignRight="@id/text_one_t_frag"
+                android:layout_below="@id/text_one_t_frag"
+                android:id="@+id/star_one_t_frag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/one_frag_selecetor"
+                android:text="@string/star"
+                android:textColor="@color/light_blue_twitter"
+                />
+
+    </RelativeLayout>

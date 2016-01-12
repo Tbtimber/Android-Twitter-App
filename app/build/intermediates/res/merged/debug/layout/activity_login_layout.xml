@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bright_foreground_inverse_material_light"
+
+    >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/twitter"
+        android:contentDescription="@string/app_name"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/blue_round_corners_background"
+        android:padding="10dp"
+        >
+        <EditText
+            android:id="@+id/loginEditText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/loginHint"
+            />
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:layout_below="@+id/loginEditText"
+            android:hint="@string/passwordHint"
+            android:layout_marginTop="10dp"
+            />
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/passwordEditText"
+            android:layout_alignParentRight="true"
+            android:text="@string/login"
+            android:background="@drawable/white_blue_round_corners_selector"
+            android:textColor="@color/blue_twitter"
+            android:layout_marginTop="10dp"
+             />
+        <CheckBox
+            android:id="@+id/rememberMe"
+            android:text="@string/remember_me"
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/loginButton"
+            android:layout_below="@id/passwordEditText"
+            android:layout_marginTop="15dp"
+            android:checked="true"
+            />
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout><!-- From: file:/D:/ISEN/M1/Android/Project/WLTwitterStep0/app/src/main/res/layout/activity_login_layout.xml -->
